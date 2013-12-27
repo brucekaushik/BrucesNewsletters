@@ -2,11 +2,12 @@
 
 $inactive_news_items = array();
 
+// store inactive news items in separate array
 $i = 0;
-foreach ($news_items as $x){
-	$x["array_id"] = $i;
-	if($x["active"] == "no"){
-		$inactive_news_items[] = $x;
+foreach ($news_items as $news){
+	$news["array_id"] = $i;
+	if($news["active"] == "no"){
+		$inactive_news_items[] = $news;
 	}
 	$i++;
 }
@@ -25,15 +26,15 @@ foreach ($news_items as $x){
 		<th>Edit Link</th>
 		<th>Delete Link</th>
 	</tr>
-	<?php foreach ($inactive_news_items as $x): ?>
+	<?php foreach ($inactive_news_items as $inactive_news): ?>
 	<tr>
-		<td><?php echo $x["news_id"] ?></td>
-		<td><?php echo $x["title"] ?></td>
-		<td class="text"><?php echo $x["news_text"] ?></td>
-		<td><?php echo $x["active"] ?></td>
-		<td><?php echo $x["html"] ?></td>
-		<td><a href='admin-interface.php?action=EditNews&&ArrayID=<?php echo $x["array_id"] ?>'>Edit</a></td>
-		<td><a href='admin-interface.php?action=DeleteNews&&ArrayID=<?php echo $x["array_id"] ?>'>Delete</a></td>
+		<td><?php echo $inactive_news["news_id"] ?></td>
+		<td><?php echo $inactive_news["title"] ?></td>
+		<td class="text"><?php echo $inactive_news["news_text"] ?></td>
+		<td><?php echo $inactive_news["active"] ?></td>
+		<td><?php echo $inactive_news["html"] ?></td>
+		<td><a href='admin-interface.php?action=EditNews&ArrayID=<?php echo $inactive_news["array_id"] ?>'>Edit</a></td>
+		<td><a href='admin-interface.php?action=DeleteNews&ArrayID=<?php echo $inactive_news["array_id"] ?>'>Delete</a></td>
 	</tr>
 	<?php endforeach; ?>
 </table>

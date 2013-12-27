@@ -1,10 +1,13 @@
 <?php
 
-// for convinience
+// handle variables
 $id = $news_items[$_GET["ArrayID"]]["news_id"];
 $news_title = $news_items[$_GET["ArrayID"]]["title"];
 $news_text = $news_items[$_GET["ArrayID"]]["news_text"];
 
+// TODO sanitize the GET variables later..
+
+// store all the emails of subscribed customers in a variable 
 $send_to = "";
 foreach($customer_info as $x){
 	if($x["sub_status"] == "yes"){

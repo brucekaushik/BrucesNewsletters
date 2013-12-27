@@ -9,9 +9,16 @@ print_r($_SESSION);
 echo "</pre>";
 //*/
 
+// connect to the database
 require '../BrucesAdminArea/includes/dbConnect.inc.php';
+
+// include the customer details array
 require 'includes/customer-info.inc.php';
+
+// include server side validation functions
 require 'includes/serverSideValidation.inc.php';
+
+// include the news items array
 require 'includes/news-items.inc.php';
 
 ?>
@@ -38,6 +45,8 @@ require 'includes/news-items.inc.php';
 		
 			<?php 
 			
+			// take action depending on the link clicked
+			// no need to sanitize further as there is no default action
 			switch (@$_GET["action"])
 			{
 				case "AddNews":

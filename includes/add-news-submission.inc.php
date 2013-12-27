@@ -1,6 +1,6 @@
 <?php
 
-// for convinience
+// handle variables
 $title = $_POST["title"];
 $text = $_POST["text"];
 if(isset($_POST["active"])){
@@ -15,7 +15,7 @@ if(isset($_POST["html"])){
 }
 $date_posted = $_POST["date_posted"];
 
-// validation
+// validate
 $title = validate_string($title);
 $title = "<h3>$title</h3>";
 $text = validate_textarea($text);
