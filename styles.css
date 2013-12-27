@@ -1,0 +1,35 @@
+.heading{
+	font-weight: bold;
+}
+
+.center{
+	text-align: center;
+}
+
+.green{
+	color: green;
+}
+
+.red{
+	color: red;
+}
+
+.topnav, .wrapper{
+	width: 940px;
+	margin: 0 auto;
+	border: 5px solid tan;
+	padding: 20px;
+}
+
+textarea{
+	width: 228px;
+}
+
+table.listofnews td{
+	border: 2px solid grey;
+	padding: 20px;
+}
+
+table.listofnews .text{
+	width: 350px;
+}
