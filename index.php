@@ -2,7 +2,7 @@
 
 session_start();
 
-$_SESSION['verify_back_to'] = "../BrucesNewsletters/home.php";
+$_SESSION['verify_back_to'] = "../BrucesNewsletters/index2.php";
 $_SESSION['app_name'] = "Bruce's Newsletters";
 
 // redirect to home page
