@@ -9,7 +9,7 @@ print_r($_SESSION);
 echo "</pre>";
 //*/
 
-require '../08-adminArea/includes/dbConnect.inc.php';
+require '../BrucesAdminArea/includes/dbConnect.inc.php';
 require 'includes/customer-info.inc.php';
 require 'includes/serverSideValidation.inc.php';
 
@@ -24,8 +24,8 @@ require 'includes/serverSideValidation.inc.php';
 <body>
 
 	<div class="topnav">
-		<a href="../08-adminArea">Home</a> | 
-		<a href="../08-adminArea/home.php?action=logout">Logout</a>
+		<a href="../BrucesAdminArea">Home</a> | 
+		<a href="../BrucesAdminArea/home.php?action=logout">Logout</a>
 	</div>
 	
 	<div class="wrapper manage-subscription-page">
@@ -47,7 +47,7 @@ require 'includes/serverSideValidation.inc.php';
 						$insertRes = mysql_query($insertQuery, $c);
 						
 						if($insertRes){
-							echo "<div class='heading green'>Your request has been submitted! Go back to <a href='../08-adminArea'>Home Page</a></div>";
+							echo "<div class='heading green'>Your request has been submitted! Go back to <a href='../BrucesAdminArea'>Home Page</a></div>";
 							// echo "first time";
 						}else {
 							echo "<div class='heading red'>There has been some error in your submission, please try again later!";
@@ -74,7 +74,7 @@ require 'includes/serverSideValidation.inc.php';
 							$insertRes = mysql_query($insertQuery, $c);
 								
 							if($insertRes){
-								echo "<div class='heading green'>Your request has been submitted! Go back to <a href='../08-adminArea'>Home Page</a></div>";
+								echo "<div class='heading green'>Your request has been submitted! Go back to <a href='../BrucesAdminArea'>Home Page</a></div>";
 								// echo "for re-sub";
 							}else {
 								echo "<div class='heading red'>There has been some error in your submission, please try again later!";
@@ -98,7 +98,7 @@ require 'includes/serverSideValidation.inc.php';
 							$updateRes = mysql_query($updateQuery, $c);
 								
 							if($updateRes){
-								echo "<div class='heading green'>Your request has been submitted! Go back to <a href='../08-adminArea'>Home Page</a></div>";
+								echo "<div class='heading green'>Your request has been submitted! Go back to <a href='../BrucesAdminArea'>Home Page</a></div>";
 								// echo "for edit";
 							}else {
 								echo "<div class='heading red'>There has been some error in your submission, please try again later!";
@@ -122,7 +122,7 @@ require 'includes/serverSideValidation.inc.php';
 							$updateRes = mysql_query($updateQuery, $c);
 							
 							if($updateRes){
-								echo "<div class='heading green'>Your request has been submitted! Go back to <a href='../08-adminArea'>Home Page</a></div>";
+								echo "<div class='heading green'>Your request has been submitted! Go back to <a href='../BrucesAdminArea'>Home Page</a></div>";
 								// echo "for unsub";
 							}else {
 								echo "<div class='heading red'>There has been some error in your submission, please try again later!";

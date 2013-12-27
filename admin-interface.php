@@ -9,7 +9,7 @@ print_r($_SESSION);
 echo "</pre>";
 //*/
 
-require '../08-adminArea/includes/dbConnect.inc.php';
+require '../BrucesAdminArea/includes/dbConnect.inc.php';
 require 'includes/customer-info.inc.php';
 require 'includes/serverSideValidation.inc.php';
 require 'includes/news-items.inc.php';
@@ -25,11 +25,11 @@ require 'includes/news-items.inc.php';
 <body>
 
 	<div class="topnav">
-		<a href="../08-adminArea">Home</a> | 
+		<a href="../BrucesAdminArea">Home</a> | 
 		<a href="admin-interface.php?action=AddNews">Add</a> |
 		<a href="admin-interface.php?action=ListActiveNews">List Active News</a> |
 		<a href="admin-interface.php?action=ListInactiveNews">List Inactive News</a> |
-		<a href="../08-adminArea/home.php?action=logout">Logout</a>
+		<a href="../BrucesAdminArea/home.php?action=logout">Logout</a>
 	</div>
 	
 	<div class="wrapper manage-subscription-page">

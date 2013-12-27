@@ -1,6 +1,6 @@
 <?php
 
-require '../08-adminArea/includes/dbConnect.inc.php';
+require '../BrucesAdminArea/includes/dbConnect.inc.php';
 
 $userDetailsQuery = "SELECT * FROM NlCustomers";
 $userDetailsRes = mysql_query($userDetailsQuery, $c);
